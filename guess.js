@@ -33,6 +33,7 @@ function checkNumber(){
     else {
         output.innerHTML = "Something is wrong, try again ";
     }
+    
 }
 btnSubmit.addEventListener("click",checkNumber);
 btnPlayAgain.addEventListener("click", function(){

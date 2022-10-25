@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Number Guessing Game</title>
 </head>
 <body>
-    <h3>Number Guessing Game</h3>
-    <hr>
-    <p id="outputText">You need to guess</p>
-    <input id="userInput"><br><br>
-    <button id="btnSubmit">Submit</button>
-    <button id="btnPlayAgain">Play Again</button>
-
-    <h1>Your previous Guesses</h1>
-    <div id="list"></div>
+    <div class="container">
+        <div class="Guessing-box">
+            <h3>Number Guessing Game</h3><br>
+            <p id="outputText">You need to guess</p><br>
+            <input id="userInput"><br><br>
+            <button id="btnSubmit">Submit</button>
+            <button id="btnPlayAgain">Play Again</button><br><br>
+            <h1>Your previous Guesses</h1>
+            <div id="list"></div>
+        </div>
+    </div>
     <script src="./guess.js"> </script>
 </body>
 </html>
