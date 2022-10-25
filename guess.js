@@ -1,8 +1,9 @@
 /* alert('test') */
 let btnSubmit = document.getElementById('btnSubmit');
-let btnPlayAgain = document.getElementById('btnPlayAgain');
 let output = document.getElementById('outputText');
 let outputList = document.getElementById('list');
+
+let btnPlayAgain = document.getElementById('btnPlayAgain');
 
 let randomNumber = Math.ceil(Math.random()*100) + 1;
 
