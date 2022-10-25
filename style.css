@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    margin: auto;
+    margin-top: 20vh;
+    width: 60%;
+    border: 3px solid #73AD21;
+    text-align: center;
+}
+
+.Guessing-box {
+    background: aquamarine;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
