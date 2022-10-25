@@ -9,7 +9,7 @@ let randomNumber = Math.ceil(Math.random()*100) + 1;
 
 function checkNumber(){
     
-        let input = parseInt(document.getElementById('userInput').value);
+        let input = parseInt(document.getElementById('userInput').value); //convert input to integer.
         if(input === randomNumber){
             output.innerHTML="You guessed the right number "+ ", "+ " it was "+ randomNumber;
             output.style.color = "green";
