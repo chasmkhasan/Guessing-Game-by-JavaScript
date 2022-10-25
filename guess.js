@@ -42,7 +42,7 @@ function checkNumber(){
         attempts++;   
     }
     else {
-        output.innerHTML="You have lost 5 chances! Try again and click on PLAY AGAIN"
+        output.innerHTML="You have lost 5 chances! Try again and click on PLAY AGAIN";
     }
 }
     
