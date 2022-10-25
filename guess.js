@@ -1,29 +1,32 @@
 /* alert('test') */
-let btnSubmit = document.getElementById('btnSubmit');
-let output = document.getElementById('outputText');
-let outputList = document.getElementById('list');
+let btnSubmit = document.getElementById('btnSubmit'); // submitt button
+let output = document.getElementById('outputText'); // showing box
+let outputList = document.getElementById('list'); // showing the list below
 
-let btnPlayAgain = document.getElementById('btnPlayAgain');
+let btnPlayAgain = document.getElementById('btnPlayAgain'); // Play again button
 
-let randomNumber = Math.ceil(Math.random()*100) + 1;
+let randomNumber = Math.ceil(Math.random()*100) + 1; // range max 100
+
+let attempts = 0; // how many time you play
 
 function checkNumber(){
-    
+    if(attempts<5){
+
         let input = parseInt(document.getElementById('userInput').value); //convert input to integer.
-        if(input === randomNumber){
-            output.innerHTML="You guessed the right number "+ ", "+ " it was "+ randomNumber;
-            output.style.color = "green";
+        if(input === randomNumber){ // winning part
+            output.innerHTML="You guessed the right number"+ ", "+ " it was "+ randomNumber;
+            output.style.color = "green"; // color change when it will show.
             outputList.innerHTML += "Matches number is " + input + "<br/>";
         }
         else if (input > randomNumber && input <= 100) {
-            output.innerHTML="You guessed too high ";
+            output.innerHTML="You need guess lower number ";
             output.style.color = "red";
-            outputList.innerHTML += "Too high " + input + "<br/>";
+            outputList.innerHTML += attempts+1  + ". " + " Too high - " + input + "<br/>";
         }
         else if (input < randomNumber && input >= 1){
-            output.innerHTML="You guessed too low ";
+            output.innerHTML="You need to guess higher number ";
             output.style.color = "blue";
-            outputList.innerHTML += "Too low is " + input + "<br/>";
+            outputList.innerHTML += attempts+1 + ". " + " Too low - " + input + "<br/>";
         }
         else if (input <= 1){
             output.innerHTML="Inputed number is Out of range ";
@@ -33,11 +36,16 @@ function checkNumber(){
             output.innerHTML = "That's not a number ";
         }
         else {
-            output.innerHTML = "Something is wrong, try again ";
+            output.innerHTML = "You need to number between 1 - 100, try again ";
         }
 
-    
+        attempts++;   
+    }
+    else {
+        output.innerHTML="You have lost 5 chances! Try again and click on PLAY AGAIN"
+    }
 }
+    
 btnSubmit.addEventListener("click",checkNumber);
 btnPlayAgain.addEventListener("click", function(){
     location.reload();
