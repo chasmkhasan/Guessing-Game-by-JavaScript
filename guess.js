@@ -14,22 +14,25 @@ function checkNumber(){
 
         let input = parseInt(document.getElementById('userInput').value); //convert input to integer.
         if(input === randomNumber){ // winning part
-            output.innerHTML="You guessed the right number"+ ", "+ " it was "+ randomNumber;
+            /* output.innerHTML="Your Previous Guess"; */
+            output.innerHTML= "You guessed the right number"+ ", "+ " it was "+ randomNumber;
             output.style.color = "green"; // color change when it will show.
-            outputList.innerHTML += "Matches number is " + input + "<br/>";
+            outputList.innerHTML += "Your Previous Guess" + "<br/>" + "Matches number is " + input + "<br/>";
         }
         else if (input > randomNumber && input <= 100) {
+            /* output.innerHTML="Your Previous Guess"; */
             output.innerHTML="You need guess lower number ";
             output.style.color = "red";
-            outputList.innerHTML += attempts+1  + ". " + " Too high - " + input + "<br/>";
+            outputList.innerHTML += attempts+1 + "Your Previous Guess" + "<br/>" + ". " + " Too high - " + input + "<br/>";
         }
         else if (input < randomNumber && input >= 1){
+            /* output.innerHTML="Your Previous Guess"; */
             output.innerHTML="You need to guess higher number ";
             output.style.color = "blue";
-            outputList.innerHTML += attempts+1 + ". " + " Too low - " + input + "<br/>";
+            outputList.innerHTML += attempts+1 + "Your Previous Guess" + "<br/>" + ". " + " Too low - " + input + "<br/>";
         }
         else if (input <= 1){
-            output.innerHTML="Inputed number is Out of range ";
+            output.innerHTML= "Inputed number is Out of range ";
             output.style.color = "aqua";
         }
         else if (isNaN(input)){
